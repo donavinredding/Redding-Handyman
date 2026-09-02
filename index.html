@@ -7,574 +7,7 @@
     <meta name="description"
         content="Redding Handyman - Professional home repair, maintenance, and improvement services in Ponca City, OK. Trusted local experts for quality craftsmanship.">
     <title>Redding Handyman | Professional Home Repair in Ponca City, OK</title>
-
-    <style>
-        /* ==========================================
-CSS VARIABLES & GLOBAL RESETS
-========================================== */
-        :root {
-            --primary-green: #1E5631;
-            --accent-green: #2D7D46;
-            --light-green: #E8F5E9;
-            --dark-gray: #1A1A1A;
-            --medium-gray: #4A4A4A;
-            --light-gray: #F4F6F4;
-            --border-gray: #E0E0E0;
-            --white: #FFFFFF;
-            --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            --transition-standard: all 0.3s ease;
-            --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button,
-        input,
-        select,
-        textarea {
-            font: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* ==========================================
-TYPOGRAPHY & UTILITIES
-========================================== */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.25rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary-green);
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--medium-gray);
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.875rem 1.75rem;
-            min-height: 48px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: var(--transition-standard);
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-green);
-            color: var(--white);
-        }
-
-        .btn-primary:hover,
-        .btn-primary:focus {
-            background-color: var(--accent-green);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border-color: var(--white);
-        }
-
-        .btn-secondary:hover,
-        .btn-secondary:focus {
-            background-color: var(--white);
-            color: var(--dark-gray);
-        }
-
-        /* ==========================================
-HEADER & NAVIGATION
-========================================== */
-        .header {
-            position: sticky;
-            top: 0;
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-green);
-        }
-
-        .logo svg {
-            width: 36px;
-            height: 36px;
-            fill: var(--primary-green);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: var(--medium-gray);
-            transition: var(--transition-standard);
-            padding: 0.5rem 0;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-green);
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            min-height: 44px;
-            min-width: 44px;
-        }
-
-        .nav-toggle svg {
-            width: 28px;
-            height: 28px;
-            stroke: var(--dark-gray);
-        }
-
-        /* ==========================================
-HERO SECTION
-========================================== */
-        .hero {
-            position: relative;
-            background-color: var(--dark-gray);
-            color: var(--white);
-            padding: 6rem 0;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/189489751_1243491819401054_3697640883301207473_n.jpg?stp=dst-jpg_tt6&cstp=mx640x1352&ctp=s640x1352&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=EuofHiDsMd0Q7kNvwEdYAwc&_nc_oc=AdrhvsGKdmsLntNoAQ6obWZjoZpTxYs82hK8GcK2JJsLog-aTObpqao0Z0bYUEUG4RQ&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=Fe-Q4lnGWmJ0o2IMJFQKHQ&_nc_ss=7b2a8&oh=00_AQIZKyQYtfMDjF7lfWRVU7hFe2lM6Hs9RMbURJTwC0bWHA&oe=6ABFC7FB');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.18;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 750px;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.25rem;
-            font-weight: 800;
-        }
-
-        .hero-desc {
-            font-size: 1.2rem;
-            color: var(--border-gray);
-            margin-bottom: 2rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        /* ==========================================
-SERVICES SECTION
-========================================== */
-        .services {
-            padding: 5rem 0;
-            background-color: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            background-color: var(--light-gray);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-gray);
-            border-top: 4px solid var(--primary-green);
-            transition: var(--transition-standard);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-card);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background-color: var(--light-green);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        .service-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--primary-green);
-        }
-
-        .service-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--dark-gray);
-        }
-
-        .service-desc {
-            color: var(--medium-gray);
-            font-size: 0.95rem;
-        }
-
-        /* ==========================================
-PORTFOLIO SECTION
-========================================== */
-        .portfolio {
-            padding: 5rem 0;
-            background-color: var(--light-gray);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .portfolio-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-        }
-
-        .portfolio-img-container {
-            width: 100%;
-            height: 220px;
-            background-color: var(--border-gray);
-            position: relative;
-        }
-
-        .portfolio-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .portfolio-info {
-            padding: 1.5rem;
-        }
-
-        .portfolio-category {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent-green);
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .portfolio-title {
-            font-size: 1.1rem;
-            color: var(--dark-gray);
-        }
-
-        /* ==========================================
-ABOUT SECTION
-========================================== */
-        .about {
-            padding: 5rem 0;
-            background-color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            color: var(--medium-gray);
-        }
-
-        .about-features {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .about-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .about-features svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--primary-green);
-        }
-
-        .about-box {
-            background-color: var(--light-green);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 6px solid var(--primary-green);
-        }
-
-        /* ==========================================
-CONTACT & MAP SECTION
-========================================== */
-        .contact {
-            padding: 5rem 0;
-            background-color: var(--light-gray);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-info-card {
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-        }
-
-        .contact-info-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--white);
-            flex-shrink: 0;
-        }
-
-        .phone-link {
-            color: var(--white);
-            text-decoration: underline;
-            transition: opacity 0.2s ease;
-        }
-
-        .phone-link:hover {
-            opacity: 0.85;
-        }
-
-        .contact-form {
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-subtle);
-        }
-
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.875rem;
-            border: 1px solid var(--border-gray);
-            border-radius: 4px;
-            background-color: var(--white);
-            color: var(--dark-gray);
-        }
-
-        .form-control:focus {
-            outline: 2px solid var(--primary-green);
-            border-color: transparent;
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 380px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid var(--border-gray);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* ==========================================
-FOOTER
-========================================== */
-        .footer {
-            background-color: var(--dark-gray);
-            color: var(--border-gray);
-            padding: 3rem 0 1.5rem;
-            border-top: 3px solid var(--primary-green);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .footer .logo svg {
-            fill: var(--white);
-        }
-
-        .footer-bottom {
-            padding-top: 1.5rem;
-            text-align: center;
-            font-size: 0.875rem;
-        }
-
-        /* ==========================================
-RESPONSIVE MEDIA QUERIES
-========================================== */
-        @media (max-width: 850px) {
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-toggle {
-                display: block;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                padding: 1.5rem 0;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                display: none;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -582,21 +15,7 @@ RESPONSIVE MEDIA QUERIES
     <header class="header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <svg viewBox="0 0 100 80" width="36" height="36">
-                    <path
-                        d="M 12 60 A 40 40 0 0 1 88 60 L 80 60 L 76 52 L 80 44 L 70 44 L 64 36 L 68 28 L 58 30 L 50 20 L 42 30 L 32 28 L 36 36 L 30 44 L 20 44 L 24 52 L 20 60 Z" />
-                    <rect x="10" y="60" width="80" height="4" />
-                    <path
-                        d="M 46 12 L 54 12 L 53 18 L 57 18 L 60 14 C 62 14 65 16 64 19 L 57 23 L 53 23 L 52 60 L 48 60 L 47 23 L 38 22 C 36 21 35 18 37 16 L 46 17 Z" />
-                    <path d="M 17 38 L 35 25 L 43 36 L 25 49 Z" />
-                    <path d="M 27 47.5 L 36 59 L 41 55 L 32 43.5 Z" />
-                    <rect x="62" y="24" width="22" height="11" rx="2" transform="rotate(-30 73 29.5)" />
-                    <path d="M 68 33 L 57 40 L 57 53 L 52 59" stroke="currentColor" stroke-width="2.5" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M 11 44 C 11 41 14 39 17 41 L 22 45 L 38 58 L 34 60 L 18 48 C 14 49 11 47 11 44 Z" />
-                    <path d="M 53 59 L 85 43 L 87 47 L 55 63 Z" />
-                    <path d="M 60 56.5 L 68 52.5 L 66 49 L 58 53 Z" />
-                </svg>
+                <img src="/images/logo.png" alt="Redding Handyman Logo">
                 Redding Handyman
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -632,30 +51,31 @@ RESPONSIVE MEDIA QUERIES
                 <p class="section-subtitle">Professional repairs and maintenance handled with care</p>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon"><svg viewBox="0 0 24 24">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
                                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                            </svg></div>
+                            </svg>
+                        </div>
                         <h3 class="service-title">General Repairs</h3>
-                        <p class="service-desc">Fixing doors, trim, drywall patching, hardware replacement, and general
-                            household fixes.</p>
+                        <p class="service-desc">Fixing doors, trim, drywall patching, hardware replacement, and general household fixes.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a.996.996 0 0 0-1.41 0L9 12.25 11.75 15l9.96-9.96c.39-.39.39-1.02 0-1.41z" />
-                            </svg></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                            </svg>
+                        </div>
                         <h3 class="service-title">Carpentry & Assembly</h3>
-                        <p class="service-desc">Custom shelving, furniture assembly, deck repairs, and custom
-                            woodworking projects.</p>
+                        <p class="service-desc">Custom shelving, furniture assembly, deck repairs, and custom woodworking projects.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><svg viewBox="0 0 24 24">
-                                <path
-                                    d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.57-1.08C9.37 20.57 10.64 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z" />
-                            </svg></div>
-                        <h3 class="service-title">Plumbing & Fixtures</h3>
-                        <p class="service-desc">Replacing faucets, repairing leaky pipes, installing ceiling fans, and
-                            swapping out light fixtures.</p>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a.996.996 0 0 0-1.41 0L9 12.25 11.75 15l9.96-9.96c.39-.39.39-1.02 0-1.41z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Painting & Finishes</h3>
+                        <p class="service-desc">Interior wall touch-ups, trim painting, staining, fence sealing, and general surface prep.</p>
                     </div>
                 </div>
             </div>
@@ -664,22 +84,28 @@ RESPONSIVE MEDIA QUERIES
         <section id="work" class="portfolio">
             <div class="container">
                 <h2 class="section-title">Recent Projects</h2>
-                <p class="section-subtitle">A sample of recent work completed for local homeowners</p>
+                <p class="section-subtitle">Click any project to expand the image</p>
                 <div class="portfolio-grid" id="portfolioGrid">
-                    <div class="portfolio-card">
+                    <!-- Privacy Fence (Supports Multiple Images) -->
+                    <div class="portfolio-card" data-src="/images/privacyfence1.jpg,/images/privacyfence2.jpg" data-title="Privacy Fence Installation & Repair">
                         <div class="portfolio-img-container">
-                            <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/471571277_2122639164819644_6584678405847593728_n.jpg?stp=dst-jpg_tt6&cstp=mx1352x640&ctp=s1352x640&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=hUjh68aYFHcQ7kNvwH0k0Yh&_nc_oc=AdriKODLbmKqjLcGNa3R_dCuqpL-L7hEnPFowmwKeIov6LoyX_WsVh0qmgyuP7833po&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=bjPfPpun0c51aa8Ep_CaMg&_nc_ss=7b2a8&oh=00_AQI3m4PCGOLSw3ri75MwV25ap196WlLNA24_b-n-ukGKMA&oe=6A9E1207"
-                                alt="Privacy Fence Installation & Repair">
+                            <img src="/images/privacyfence1.jpg" alt="Privacy Fence Installation & Repair">
+                            <div class="portfolio-overlay">
+                                <span>Click to View</span>
+                            </div>
                         </div>
                         <div class="portfolio-info">
                             <div class="portfolio-category">Outdoor</div>
                             <h3 class="portfolio-title">Privacy Fence Installation & Repair</h3>
                         </div>
                     </div>
-                    <div class="portfolio-card">
+                    <!-- Flooring Installation & Repair -->
+                    <div class="portfolio-card" data-src="/images/bathroom.jpg" data-title="Flooring Installation & Repair">
                         <div class="portfolio-img-container">
-                            <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/187692989_1243493726067530_3584570014078237938_n.jpg?stp=dst-jpg_tt6&cstp=mx640x1352&ctp=s640x1352&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0lE_SItr-NUQ7kNvwGDs8YQ&_nc_oc=AdqQh6fNrg2Orub5ECaxOcb-px2v_nBFolg4eGzdrHYcqS2khRfehXxSTfiX9O2w5Hk&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=0ki0ENgtEaNnD8pEqhUNAQ&_nc_ss=7b2a8&oh=00_AQJ1gC4NhOmK2lx0Ql0y93-G5YVxRaRLNF6uJnef28AblA&oe=6ABFAE2E"
-                                alt="Flooring Installation & Repair">
+                            <img src="/images/bathroom.jpg" alt="Flooring Installation & Repair">
+                            <div class="portfolio-overlay">
+                                <span>Click to View</span>
+                            </div>
                         </div>
                         <div class="portfolio-info">
                             <div class="portfolio-category">Indoor</div>
@@ -701,15 +127,24 @@ RESPONSIVE MEDIA QUERIES
                         <p>We believe in straightforward pricing, showing up on time, and treating your home with the
                             same care we treat our own.</p>
                         <ul class="about-features">
-                            <li><svg viewBox="0 0 24 24">
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                                </svg> 
+                                Fully Insured for Your Protection
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
                                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg> Licensed & Fully Insured</li>
-                            <li><svg viewBox="0 0 24 24">
+                                </svg> 
+                                Over 15 Years Combined Experience
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
                                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg> Over 15 Years Combined Experience</li>
-                            <li><svg viewBox="0 0 24 24">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg> Free Estimates & Honest Advice</li>
+                                </svg> 
+                                Free Estimates & Honest Advice
+                            </li>
                         </ul>
                     </div>
                     <div class="about-box">
@@ -747,8 +182,8 @@ RESPONSIVE MEDIA QUERIES
                             </svg>
                             <div>
                                 <strong>Email</strong>
-                                <p><a href="mailto:mikereddingcswp@yahoo.com"
-                                        class="phone-link">mikereddingcswp@yahoo.com</a></p>
+                                <p><a href="mailto:reddinghandyman@yahoo.com"
+                                        class="phone-link">reddinghandyman@yahoo.com</a></p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -777,7 +212,7 @@ RESPONSIVE MEDIA QUERIES
                             <select id="service" class="form-control">
                                 <option value="general">General Repair</option>
                                 <option value="carpentry">Carpentry / Assembly</option>
-                                <option value="plumbing">Plumbing / Fixtures</option>
+                                <option value="painting">Painting & Finishes</option>
                                 <option value="other">Other / Custom Request</option>
                             </select>
                         </div>
@@ -801,38 +236,20 @@ RESPONSIVE MEDIA QUERIES
         </section>
     </main>
 
+    <!-- LIGHTBOX MODAL FOR RECENT PROJECTS -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Project Image">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="logo" style="color: var(--white);">
-                    <svg viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 12,68 A 40,40 0 0,1 88,68 L 84,68 A 36,36 0 0,0 16,68 Z" />
-                        <path
-                            d="M 12,68 L 8,62 L 15,63 L 13,56 L 20,59 L 20,51 L 27,56 L 29,48 L 35,54 L 39,47 L 44,53 L 50,47 L 56,53 L 61,47 L 65,54 L 71,48 L 73,56 L 80,51 L 80,59 L 87,56 L 85,63 L 92,62 L 88,68 Z" />
-
-                        <path d="M 46,28 H 54 V 70 H 46 Z" />
-                        <path d="M 36,22 C 36,22 42,28 46,28 H 54 C 58,28 64,22 64,22 V 18 H 36 Z" />
-                        <g transform="rotate(-30 50 50)">
-                            <path d="M 46,20 H 54 V 35 H 46 Z" opacity="0.9" />
-                            <rect x="45" y="35" width="10" height="4" fill="#ffffff" />
-                            <path d="M 47,39 H 53 V 68 H 47 Z" />
-                        </g>
-
-                        <g transform="rotate(35 50 50)">
-                            <rect x="52" y="16" width="22" height="10" rx="2" />
-                            <path d="M 52,21 H 44 V 40 H 48" fill="none" stroke="currentColor" stroke-width="2.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </g>
-
-                        <g transform="rotate(-55 50 50)">
-                            <path
-                                d="M 47,30 C 43,28 41,22 45,18 C 47,16 50,17 50,17 C 48,20 50,22 52,21 C 54,20 54,17 52,15 C 55,15 58,18 56,22 C 55,25 53,28 49,30 V 68 H 47 Z" />
-                        </g>
-
-                        <g transform="rotate(55 50 50)">
-                            <path d="M 48,20 L 52,20 L 51,36 L 53,38 L 53,60 C 53,63 47,63 47,60 L 47,38 L 49,36 Z" />
-                        </g>
-                    </svg>
+                    <img src="/images/logo.png" alt="Redding Handyman Logo">
                     Redding Handyman
                 </div>
                 <p style="font-size: 0.9rem;">Quality Home Repairs & Craftsmanship in Ponca City, OK</p>
@@ -843,28 +260,7 @@ RESPONSIVE MEDIA QUERIES
         </div>
     </footer>
 
-    <script>
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your request! We will get back to you shortly.');
-            e.target.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
